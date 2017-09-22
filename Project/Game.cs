@@ -135,19 +135,41 @@ namespace CastleGrimtol.Project
         {
         }
         //No need to Pass a room since Items can only be used in the CurrentRoom
-        public void UseItem(string itemName)
+        public void UseItem(string item)
         {
+            
+            
+            for (var i = 0; i < CurrentPlayer.Inventory.Count; i++)
+                if (CurrentPlayer.Inventory[i].Name == item)
+                {
+                    CurrentPlayer.Score = CurrentPlayer.Score - 100;
+
+                    if (CurrentPlayer.Score <= 0)
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("-100pts:  You started by eating one and then ate 12.  Sorry, you're probably not going to make weight for the Johnny's Fitclub Challenge tomorrow!  Game Over!");
+                        Environment.Exit(0);
+                    }
+
+                }
+                // else if (CurrentPlayer.Inventory[i].Name != item || CurrentPlayer.Inventory.Count ==0)
+                // {
+                //     Console.WriteLine("");
+                //     Console.WriteLine("<--Sorry, you can not use an item you have not yet taken.-->");
+                // }
 
         }
 
         public void TakeItem(string item)
-        {
+        {  
             for (var i = 0; i < CurrentRoom.Items.Count; i++)
             {
 
-
+                 System.Console.WriteLine(CurrentRoom.Items[i].Name);                 
+                 Console.WriteLine(item);
                 if (CurrentRoom.Items[i].Name == item)
-                {
+                {   
+                    Console.WriteLine(CurrentRoom.Items[i]);
                     CurrentPlayer.Inventory.Add(CurrentRoom.Items[i]);
                     CurrentRoom.Items.Remove(CurrentRoom.Items[i]);
 
