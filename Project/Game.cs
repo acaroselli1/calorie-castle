@@ -58,16 +58,16 @@ namespace CastleGrimtol.Project
             "the sights around you are making you want to start your diet next week.");
 
             Room Cookies = new Room("Oreo Room", "You find yourself in a room full of oreos of every variety!  You are trying to watch your " +
-            "eating habits but you never passed up an oreo before.  Boxes of Oreos line the walls from floor to ceiling.  You  are very hungry and " +
+            "eating habits but you have never passed up an oreo before.  Boxes of Oreos line the walls from floor to ceiling.  You are very hungry and " +
             "the sights are making you think about starting your diet in a day or two.");
 
             Room Candy = new Room("ButterFinger Room", "Cavities and calories all in one.  You find yourself in a room full of Butterfingers. " +
-            "Boxes of butterfingers line the walls from floor to ceiling.  You are trying to stay trim but you wondering if maybe your scale " +
+            "Boxes of Butterfingers line the walls from floor to ceiling.  You are trying to stay trim but you wondering if maybe your scale " +
             "is off by 25-30 pounds.");
 
-            Room Icecream = new Room("Ice-Cream Room", "You find yourself in a freezer full of boxes of icecream sandwiches. A little bit of calcium and a whole lot of empty calories.  You're not one to let treats like this go to waste; though you understand that, if you don't, it will go to your waist.");
+            Room Icecream = new Room("Icecream Room", "You find yourself in a freezer full of boxes of icecream sandwiches. A little bit of calcium and a whole lot of empty calories.  You're not one to let treats like this go to waste; though you understand that, if you don't, it will go to your waist.  While looking over the boxes for anything redeeming in the nutrition facts, you happen to notice a switch on the wall.");
             
-            Room Win = new Room("Winner's Room!!!!", "You successfully made it through all the challenges without consuming any of the foods on the unhealthy list!! Way to go to!! You are sure to make weight for the Johnny's Fitclub Challenge and win the grand prize!!!");
+            Room Win = new Room("Winner's Room!!!!", "You successfully made it through all the room challenges without consuming any of the foods on the unhealthy list!! Way to go to!! You are sure to make weight for the Johnny's Fitclub Challenge and win the grand prize!!!");
 
             Room Outside = new Room("Outside", "Well, you're back outside.  Go 'e' to play.");
 
@@ -150,9 +150,9 @@ namespace CastleGrimtol.Project
                Console.ResetColor();
                Console.WriteLine("");
                Console.Beep(3000,250);
-               Console.Beep(2000,100);
-               Console.Beep(2000,100);
-               Console.Beep(3000,750);
+               Console.Beep(2000,175);
+               Console.Beep(2000,175);
+               Console.Beep(3000,1000);
                Environment.Exit(0);
 
 
