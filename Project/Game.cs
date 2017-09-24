@@ -67,7 +67,7 @@ namespace CastleGrimtol.Project
 
             Room Icecream = new Room("Icecream Room", "You find yourself in a freezer full of boxes of icecream sandwiches. A little bit of calcium and a whole lot of empty calories.  You're not one to let treats like this go to waste; though you understand that, if you don't, it will go to your waist.  While looking over the boxes for anything redeeming in the nutrition facts, you happen to notice a switch on the wall.");
             
-            Room Win = new Room("Winner's Room!!!!", "You successfully made it through all the room challenges without consuming any of the foods on the unhealthy list!! Way to go to!! You are sure to make weight for the Johnny's Fitclub Challenge and win the grand prize!!!");
+            Room Win = new Room("Winner's Room!!!!", "You successfully made it through all the room challenges without consuming any of the foods on the unhealthy list!! Way to go!! You are sure to make weight for the Johnny's Fitclub Challenge and win the grand prize!!!");
 
             Room Outside = new Room("Outside", "Well, you're back outside.  Go 'e' to play.");
 
@@ -164,7 +164,7 @@ namespace CastleGrimtol.Project
         //No need to Pass a room since Items can only be used in the CurrentRoom
         public void UseItem(string item)
         {
-            if (item == "switch" && CurrentRoom.Name == "Ice-Cream Room" )
+            if (item == "switch" && CurrentRoom.Name == "Icecream Room" )
             {
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("");
