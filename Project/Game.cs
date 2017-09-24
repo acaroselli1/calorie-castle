@@ -12,7 +12,8 @@ namespace CastleGrimtol.Project
 
         public void HelpGuide()
 
-        {
+        {   
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("");
             Console.WriteLine("Game Commands");
             Console.WriteLine("--------------------------------------");
@@ -23,7 +24,7 @@ namespace CastleGrimtol.Project
             Console.WriteLine("Quit game - type 'Q'.-->  This command exits the game.");
             Console.WriteLine("Help - type 'H'.-->  This command lists the Game Commands as seen here.");
             Console.WriteLine("");
-
+            Console.ResetColor();
         }
 
 
@@ -140,7 +141,9 @@ namespace CastleGrimtol.Project
             if (CurrentRoom.Name == "Winner's Room!!!!")
             {
                CurrentPlayer.Score = CurrentPlayer.Score + 100;
+               Console.ForegroundColor = ConsoleColor.Green;
                Console.WriteLine("+100pts:  You have doubled your initial score and now have the winning total of " + CurrentPlayer.Score + " points!");
+               Console.ResetColor();
                Console.WriteLine("");
                Environment.Exit(0);
 
@@ -172,8 +175,10 @@ namespace CastleGrimtol.Project
                     if (CurrentPlayer.Score <= 0)
                     {
                         Console.WriteLine("");
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("-100pts:  You start by eating one and then eat 12.  Sorry, you're probably not going to make weight for the Johnny's Fitclub Challenge weigh-in tomorrow!  Game Over!");
                         Console.WriteLine("");
+                        Console.ResetColor();
                         Environment.Exit(0);
                     }
 

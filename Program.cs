@@ -6,7 +6,8 @@ namespace CastleGrimtol
     public class Program
     {
         public static void Main(string[] args)
-        {
+        {   
+            Console.ResetColor();
             Project.Game Game = new Project.Game();
             Game.Setup();
 
@@ -17,7 +18,9 @@ namespace CastleGrimtol
             while (playing)
             {
                 Console.WriteLine("");
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("What would you like to do next? (Note: You can not use food items you have not taken.)");
+                Console.ResetColor();
                 PlayerChoice = Console.ReadLine();
                 validateChoice(PlayerChoice);
             }
