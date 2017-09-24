@@ -38,9 +38,11 @@ namespace CastleGrimtol.Project
         {
 
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("");
             Console.WriteLine("Welcome to Calorie Castle!");
             Console.WriteLine("");
+            Console.ResetColor();
             // Console.WriteLine("What is your name?");
             // Console.WriteLine("");
             // string playername = Console.ReadLine();
@@ -112,7 +114,8 @@ namespace CastleGrimtol.Project
 
         public void Look()
         {
-
+            
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine($"\nYou have entered the {CurrentRoom.Name} - {CurrentRoom.Description}\n");
 
 
@@ -131,6 +134,7 @@ namespace CastleGrimtol.Project
                 count2++;
             }
             Console.WriteLine("");
+            Console.ResetColor();
         }
 
         public void Go(string direction)
@@ -145,6 +149,10 @@ namespace CastleGrimtol.Project
                Console.WriteLine("+100pts:  You have doubled your initial score and now have the winning total of " + CurrentPlayer.Score + " points!");
                Console.ResetColor();
                Console.WriteLine("");
+               Console.Beep(3000,250);
+               Console.Beep(2000,100);
+               Console.Beep(2000,100);
+               Console.Beep(3000,750);
                Environment.Exit(0);
 
 
@@ -158,9 +166,10 @@ namespace CastleGrimtol.Project
         {
             if (item == "switch" && CurrentRoom.Name == "Ice-Cream Room" )
             {
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("");
-            Console.WriteLine("You flip the switch not knowing its purpose.  Tired from your journey you lay down to take a short nap with freezer temperature becoming surprisingingly comfortable.  Twelve hours later you wake up dripping with sweat; feeling the affects of the summer heat wave!  You notice that the freezer once full of ice cream sandwiches is now nothing more than an ice cream pond.  The switch you flipped turned off the freezer and you're actually bathing in liquid ice cream!  The ice cream sandwich boxes are now gone from the room inventory so these are no longer an item you can take or use.");
-
+            Console.WriteLine("You flip the switch not knowing its purpose.  Tired from your journey, you lay down to take a short nap with freezer temperature becoming surprisingingly comfortable.  Twelve hours later, you wake up dripping with sweat; feeling the effects of the summer heat wave!  You notice that the freezer, once full of ice cream sandwiches, is now nothing more than an ice cream pond.  The switch you flipped turned off the freezer and you're actually bathing in liquid ice cream!  The ice cream sandwich boxes are now gone from the room inventory so these are no longer an item you can take or use.");
+            Console.ResetColor();
             CurrentRoom.Items.Remove(CurrentRoom.Items[0]);
 
            
@@ -177,6 +186,8 @@ namespace CastleGrimtol.Project
                         Console.WriteLine("");
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("-100pts:  You start by eating one and then eat 12.  Sorry, you're probably not going to make weight for the Johnny's Fitclub Challenge weigh-in tomorrow!  Game Over!");
+                        Console.Beep(300,500);
+                        Console.Beep(250,1500);
                         Console.WriteLine("");
                         Console.ResetColor();
                         Environment.Exit(0);
